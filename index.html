@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="logo">🎵 MyPlayer</div>
+    
+  </div>
+  <div class="main-content">
+    <div class="playlist-toggle-wrapper">
+      <button class="playlist-toggle" onclick="togglePlaylist()">☰ Playlist</button>
+    </div>
+
+    <div class="playlist" id="playlist">
+      <h2>Playlist</h2>
+      <button class="playlist-close" onclick="togglePlaylist()">×</button>
+      <div class="playlist-scroll"></div>
+    </div>
+
+
+    <div class="player">
+      <div class="cover" id="cover"></div>
+      <div class="info">
+        <h3 id="title">Title</h3>
+        <p id="artist">Artist</p>
+      </div>
+      <input type="range" class="progress" id="progress" value="0" />
+      <div class="time">
+        <span id="current-time">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+      <div class="controls">
+        <button onclick="prevSong()">⏮️</button>
+        <button onclick="togglePlay()" id="play-btn">▶️</button>
+        <button onclick="nextSong()">⏭️</button>
+      </div>
+      <div class="volume-wrapper">
+        <input class="volume-control" type="range" id="volume" min="0" max="1" step="0.01" />
+        <span id="volume-label">100%</span>
+      </div>
+    
+    <audio id="audio"></audio>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
