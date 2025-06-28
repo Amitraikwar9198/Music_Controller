@@ -38,7 +38,7 @@
     
 
     .main-content {
-      flex: 1;
+      flex: 0.5;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -220,6 +220,6 @@
 
     @media (max-width: 480px) {
       .cover { width: 200px; height: 200px; }
-      .info h3 { font-size: 18px; }
+      .info h3 { font-size: 11px; }
       .controls button { font-size: 22px; }
     }
